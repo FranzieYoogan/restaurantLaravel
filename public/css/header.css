@@ -1,0 +1,38 @@
+.spanStyle {
+
+    font-weight: 900;
+
+}
+
+.navbarStyle {
+
+    border-bottom: 2px solid black;
+    background-color: #e82f3e;
+
+}
+
+.spanStyle {
+
+    color: white;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+.navbarStyle2 {
+
+    background-color: #e82f3e;
+
+}
+
+.anchorStyle {
+
+    color: white !important;
+
+}
+
+
+.anchorStyle:hover {
+
+    border-bottom: 1px solid white;
+
+}

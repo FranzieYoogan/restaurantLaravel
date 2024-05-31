@@ -1,0 +1,36 @@
+.formStyle {
+
+    margin-top: 4em;
+
+}
+
+.loginButton {
+
+    width: 100% !important;
+    background-color: #e82f3e !important;
+    border: 1px solid black;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.loginButton:hover, .loginButton:active, .loginButton:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: #fc4151 !important;
+    border: 1px solid black !important;
+
+}
+
+.inputStyle {
+
+    border: 2px solid transparent !important;
+
+}
+
+.inputStyle:hover, .inputStyle:active, .inputStyle:focus {
+
+    border: 2px solid #e82f3e !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+}
