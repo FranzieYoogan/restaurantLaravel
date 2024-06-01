@@ -31,7 +31,7 @@
 .inputStyle {
 
     border: 1px solid black !important;
-
+    border-radius: 0px !important;
 }
 
 .inputStyle:hover, .inputStyle:active, .inputStyle:focus {
