@@ -1,0 +1,67 @@
+.buttonStyle {
+
+    width: 100% !important;
+    background-color: #e82f3e !important;
+    border: 1px solid black;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.buttonStyle:hover, .buttonStyle:active, .buttonStyle:focus {
+
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: #fc4151 !important;
+    border: 1px solid black !important;
+}
+
+.containerAll {
+
+    background-color: #6b020b !important;
+
+}
+
+.containerItems {
+
+    border-radius: 10px;
+
+}
+
+
+.inputStyle {
+
+    border: 1px solid black !important;
+
+}
+
+.inputStyle:hover, .inputStyle:active, .inputStyle:focus {
+
+    border: 1px solid #fc4151 !important;
+    box-shadow: 0px 0px 4px 0px #fc4151 !important;
+
+}
+
+
+/* scrollbar */
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fc4151;
+    border: 1px solid black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
