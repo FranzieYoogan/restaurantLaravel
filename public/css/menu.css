@@ -77,6 +77,27 @@
     margin-bottom: 1em;
 }
 
+.closeStyle {
+
+    width: 30px;
+    position: absolute;
+    left: 90%;
+    top: -5%;
+    cursor: pointer;
+
+}
+
+.closeStyle:hover {
+
+    transform: scale(1.2);
+
+}
+
+.errorStyle {
+
+    margin-top: 3em;
+}
+
 body {
 
     background-color: #6b020b;

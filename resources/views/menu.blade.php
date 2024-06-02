@@ -22,17 +22,17 @@
 
 
 
-@if(isset($plates))
+@if(isset($plates) && $plates)
 
-<div class="containerCrud">
-    
+<form class="containerCrud" method="POST" action="/delete">
+    @csrf
     @foreach ($plates as $plate )
         
-    <div>
-
-  
+    <div style="position: relative;">
+    
+    <button type="submit" class="closeStyle"><img  src="{{asset('/icons/close.png')}}" alt=""></button>
     <h1 class="titleStyle">{{ucfirst($plate->plateDay)}} - Menu</h1>
-
+    <input style="display: none" name="id" type="text" value="{{$plate->id}}">
     <h1 class="titlePlate">{{$plate->plateName}}</h1>
 
     <p class="description">{{$plate->plateDescription}}</p>
@@ -48,6 +48,12 @@
     @endforeach
 
 
+</form>
+
+@elseif(!isset($error) && isset($_POST['submit']))
+
+<div class="errorStyle p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+  <span class="font-medium">ERROR!</span> NO MENU REGISTERED.
 </div>
 
 @endif
@@ -76,7 +82,7 @@
  
 
   <div>
-  <button type="submit" class="menuButton text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show Menu</button>
+  <button type="submit" name="submit" class="menuButton text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show Menu</button>
   </div>
 
   </div>

@@ -19,6 +19,10 @@ Route::get('/menu', function () {
     return view('menu');
 });
 
+Route::get('/delete', function () {
+    return view('delete');
+});
+
 
 Route::post('/login', [Controller::class, 'login']);
 
@@ -27,3 +31,5 @@ Route::get('/logout', [Controller::class, 'logout']);
 Route::post('/createmenu', [Controller::class, 'createmenu']);
 
 Route::post('/menu', [Controller::class, 'getMenu']);
+
+Route::post('/delete', [Controller::class, 'delete']);

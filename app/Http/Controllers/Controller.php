@@ -88,6 +88,12 @@ class Controller
 
         return view('menu', ['plates' => $plates]);
 
+    } elseif( DB::select("select * from menu where plateDay = 'monday' ") == "") {
+
+        $error = true;
+
+        return view('menu', ['error' => $error]);
+
     }
 
         if($day == "tuesday") {
@@ -98,6 +104,12 @@ class Controller
     
 
         return view('menu', ['plates' => $plates]);
+
+    } elseif( DB::select("select * from menu where plateDay = 'tuesday' ") == "") {
+
+        $error = true;
+
+        return view('menu', ['error' => $error]);
 
     }
 
@@ -110,6 +122,12 @@ class Controller
 
         return view('menu', ['plates' => $plates]);
 
+    } elseif( DB::select("select * from menu where plateDay = 'wednesday' ") == "") {
+
+        $error = true;
+
+        return view('menu', ['error' => $error]);
+
     }
 
         if($day == "thursday") {
@@ -120,6 +138,12 @@ class Controller
     
 
         return view('menu', ['plates' => $plates]);
+
+    } elseif( DB::select("select * from menu where plateDay = 'thursday' ") == "") {
+
+        $error = true;
+
+        return view('menu', ['error' => $error]);
 
     }
 
@@ -139,6 +163,12 @@ class Controller
 
     return view('menu', ['plates' => $plates]);
 
+} elseif( DB::select("select * from menu where plateDay = 'friday' ") == "") {
+
+    $error = true;
+
+    return view('menu', ['error' => $error]);
+
 }
 
 if($day == "saturday") {
@@ -156,6 +186,12 @@ if($day == "saturday") {
 }
 
 return view('menu', ['plates' => $plates]);
+
+} elseif( DB::select("select * from menu where plateDay = 'saturday' ") == "") {
+
+    $error = true;
+
+    return view('menu', ['error' => $error]);
 
 }
 
@@ -175,7 +211,16 @@ if($day == "sunday") {
 
 return view('menu', ['plates' => $plates]);
 
-} if($day == "Choose a day") {
+} elseif( DB::select("select * from menu where plateDay = 'sunday' ") == "") {
+
+    $error = true;
+
+    return view('menu', ['error' => $error]);
+
+}
+
+
+if($day == "Choose a day") {
 
     $error = true;
 
@@ -184,6 +229,16 @@ return view('menu', ['plates' => $plates]);
 
 
     } 
+
+    public function delete(Request $request) {
+
+        $id = $request->input('id');
+
+       DB::delete("delete from menu where id = '$id' ");
+
+       return view('delete');
+
+    }
 
 
 

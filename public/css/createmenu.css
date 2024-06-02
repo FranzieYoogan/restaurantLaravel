@@ -24,7 +24,6 @@
 .containerItems {
 
     border-radius: 10px;
-
 }
 
 
@@ -32,6 +31,15 @@
 
     border: 1px solid black !important;
     border-radius: 0px !important;
+    width: 100px !important;
+}
+
+@media only screen and (width: 320px) {
+  .inputStyle {
+    
+    width: 50px !important;
+
+  }
 }
 
 .inputStyle:hover, .inputStyle:active, .inputStyle:focus {
