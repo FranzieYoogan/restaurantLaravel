@@ -31,8 +31,8 @@
 }
 
 
-.anchorStyle:hover {
+.anchorStyle:hover, .anchorStyle:active, .anchorStyle:focus {
 
     border-bottom: 1px solid white !important;
-
+    background-color: transparent !important;
 }
