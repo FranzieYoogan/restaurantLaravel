@@ -39,6 +39,14 @@
 
 }
 
+.containerErrorAll {
+
+
+    display: flex;
+    justify-content: center;
+
+}
+
 body {
 
     background-color: #6b020b !important;
