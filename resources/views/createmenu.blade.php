@@ -94,6 +94,16 @@
   <span class="font-medium">Success!!</span> Menu saved.
 </div>
 
+<script>
+
+  setTimeout(() => {
+
+    window.location.href = "http://127.0.0.1:8000/createmenu"
+
+  }, 2000);
+
+</script>
+
 @endif
 
 @if(isset($error))
@@ -101,11 +111,24 @@
   <span class="font-medium">ERROR!</span> Select an day
 </div>
 
+<script>
+
+  setTimeout(() => {
+
+    window.location.href = "http://127.0.0.1:8000/createmenu"
+
+  }, 2000);
+
+</script>
+
 @endif
 
 </section>
 </div>
 
+<div>
+@include('footer')
+</div>
 
     
 </body>

@@ -1,0 +1,26 @@
+footer {
+
+    background-color: #e82f3e;
+    border-top: 2px solid black;
+}
+
+.footerSpan {
+
+    color: white;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+.anchorFooter {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    transition: 1s;
+}
+
+.anchorFooter:hover {
+
+    background: -webkit-linear-gradient(#ff6f7b, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 2px #f37782;
+}
