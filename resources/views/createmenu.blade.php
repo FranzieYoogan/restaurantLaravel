@@ -20,8 +20,8 @@
   <!--   tip; mx-auto -- jagab ilusti keskele  -->
   <div class="containerItems bg-white p-10 md:w-3/4 lg:w-1/2 mx-auto">
 
-    <form action="">
-
+    <form action="/createmenu" method="POST" enctype="multipart/form-data">
+    @csrf
       <!--       flex - asjad korvuti, nb! flex-1 - element kogu ylejaanud laius -->
       <div class="flex items-center mb-5">
         <!--         tip - here neede inline-block , but why? -->
@@ -30,7 +30,7 @@
         <input type="text" id="plate" name="plate" placeholder="Plate" 
                class="inputStyle flex-1 py-2 border-b-2 border-gray-400 focus:border-green-400 
                       text-gray-600 placeholder-gray-400
-                      outline-none">
+                      outline-none" required>
       </div>
 
       <div class="flex items-center mb-5">
@@ -40,7 +40,7 @@
         <input type="text" id="description" name="description" placeholder="description" 
                class="inputStyle flex-1 py-2 border-b-2 border-gray-400 focus:border-green-400 
                       text-gray-600 placeholder-gray-400
-                      outline-none">
+                      outline-none" required>
       </div>
 
      
@@ -52,16 +52,16 @@
         <input type="file" id="file" name="file" placeholder="file" 
                class="fileStyle flex-1 py-2 border-b-2 border-gray-400 focus:border-green-400 
                       text-gray-600 placeholder-gray-400
-                      outline-none">
+                      outline-none" required>
       </div>
 
       <div class="flex items-center mb-5">
         <!--         tip - here neede inline-block , but why? -->
-        <label for="countries" class="inline-block w-20 mr-6 text-right 
+        <label for="day" class="inline-block w-20 mr-6 text-right 
                                  font-bold text-gray-600">day</label>
-  <select id="countries" class="inputStyle flex-1 py-2 border-b-2 border-gray-400 focus:border-green-400 
+  <select id="day" name="day" class="inputStyle flex-1 py-2 border-b-2 border-gray-400 focus:border-green-400 
                       text-gray-600 placeholder-gray-400
-                      outline-none">
+                      outline-none" required>
     <option selected>Choose a day</option>
     <option value="monday">Monday</option>
     <option value="tuesday">Tuesday</option>
@@ -77,11 +77,33 @@
    
 
       <div class="text-right">
-        <button class="buttonStyle py-3 px-8 bg-green-400 text-white font-bold">Submit</button> 
+        <button type="submit" class="buttonStyle py-3 px-8 bg-green-400 text-white font-bold">Submit</button> 
       </div>
 
     </form>
+
+
   </div>
+
+  <section class="containerAlert">
+  @if(isset($ok))
+
+
+
+  <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+  <span class="font-medium">Success!!</span> Menu saved.
+</div>
+
+@endif
+
+@if(isset($error))
+<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+  <span class="font-medium">ERROR!</span> Select an day
+</div>
+
+@endif
+
+</section>
 </div>
 
 

@@ -1,0 +1,109 @@
+.containerAll {
+
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.containerItems {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+   
+
+}
+
+.containerCrud {
+
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    background-color: #e82f3e;
+}
+
+.menuButton {
+
+    width: 100% !important;
+    background-color: #e82f3e !important;
+    border: 1px solid black;
+    box-shadow: none !important;
+    outline: none !important;
+    margin-top: 1em;
+}
+
+.menuButton:hover, .menuButton:active, .menuButton:focus {
+
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: #fc4151 !important;
+    border: 1px solid black !important;
+}
+
+.imgStyle {
+
+    width: 200px;
+    border: 1px solid white;
+    border-radius: 10px;
+
+}
+
+.titleStyle {
+
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 1em;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.titlePlate {
+
+    color: white;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px black;
+
+}
+
+.description {
+
+    font-style: italic;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 1em;
+}
+
+body {
+
+    background-color: #6b020b;
+
+}
+
+
+/* scrollbar */
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fc4151;
+    border: 1px solid black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

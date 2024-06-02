@@ -41,6 +41,14 @@
 
 }
 
+.containerAlert {
+
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+
+}
+
 
 /* scrollbar */
 
