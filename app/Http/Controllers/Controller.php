@@ -76,6 +76,7 @@ class Controller
     public function getMenu(Request $request) {
 
         $day = $request->input('day');
+        
 
         if($day == "monday") {
 
@@ -213,14 +214,14 @@ return view('menu', ['plates' => $plates]);
 
 } elseif( DB::select("select * from menu where plateDay = 'sunday' ") == "") {
 
+
     $error = true;
 
     return view('menu', ['error' => $error]);
 
 }
-
-
-if($day == "Choose a day") {
+  
+else {
 
     $error = true;
 
