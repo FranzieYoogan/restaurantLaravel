@@ -21,8 +21,8 @@
   <!--Copyright section-->
   <div class="bg-black/5 p-6 text-center">
     <span class="footerSpan">© 2023 Copyright:</span>
-    <a class="anchorFooter font-semibold" href="https://tw-elements.com/"
-      >TW Elements</a
+    <a class="anchorFooter font-semibold" href="https://www.craiyon.com"
+      >Craiyon</a
     >
   </div>
 </footer>
